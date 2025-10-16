@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GoBa Agency | Postúlate ahora</title>
+  <meta name="description" content="Landing para captar modelos - GoBa Agency. Crece, brilla y gana con nosotros.">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e6adf6.js" crossorigin="anonymous"></script>
+  <style>.lang-hidden{display:none}.flag{cursor:pointer}</style>
+</head>
+<body class="bg-white text-gray-900">
+
+<header class="bg-black text-white py-4 fixed w-full z-40">
+  <div class="container mx-auto px-6 flex items-center justify-between">
+    <img src="assets/logo.svg" alt="GoBa Agency" class="h-10">
+    <div class="flex items-center space-x-3">
+      <span class="flag" onclick="setLang('es')">🇪🇸</span>
+      <span class="flag" onclick="setLang('en')">🇺🇸</span>
+    </div>
+  </div>
+</header>
+
+<main class="pt-24">
+  <section class="py-32 bg-gradient-to-r from-black via-gray-900 to-pink-700 text-white text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 lang es">Postúlate hoy — Crece, brilla y gana</h1>
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 lang en lang-hidden">Apply today — Grow, shine & earn</h1>
+    <p class="max-w-2xl mx-auto mb-8 lang es">Landing diseñada para convertir: enfoque directo, pruebas sociales y llamado a la acción claro.</p>
+    <p class="max-w-2xl mx-auto mb-8 lang en lang-hidden">High-converting landing focused on clear CTAs and social proof.</p>
+    <a href="#form" class="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold">Postúlate</a>
+  </section>
+
+  <section class="py-12 container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-2xl font-bold mb-3 lang es">¿Por qué GoBa?</h3>
+        <h3 class="text-2xl font-bold mb-3 lang en lang-hidden">Why GoBa?</h3>
+        <ul class="list-disc pl-5 space-y-2 text-sm">
+          <li>Gestión 24/7 del chat / 24/7 chat management</li>
+          <li>Estrategias para fans en EE. UU. / US-targeted growth</li>
+          <li>Soporte y verificación / Account setup & verification</li>
+          <li>Escalamos tu facturación a $5.000 mensuales / Scale to $5,000/mo</li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-gray-50 p-6 rounded-xl shadow">
+          <h4 class="font-semibold mb-3">Historias reales / Real stories</h4>
+          <p class="italic">“Pasé de $300 a $5,000 en 3 meses.” — Camila</p>
+          <p class="italic mt-3">“Soporte 24/7, todo profesional.” — Sofía</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form" class="py-12 bg-pink-50">
+    <div class="container mx-auto px-6 max-w-lg">
+      <form action="https://formsubmit.co/yansr20@yahoo.com" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="nombre" placeholder="Tu nombre completo / Your full name" class="w-full border rounded p-3" required>
+        <input type="email" name="email" placeholder="Correo / Email" class="w-full border rounded p-3" required>
+        <input type="text" name="pais" placeholder="País / Country" class="w-full border rounded p-3" required>
+        <textarea name="mensaje" placeholder="Cuéntanos sobre ti / Tell us about you" class="w-full border rounded p-3" rows="4"></textarea>
+        <button type="submit" class="w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded font-semibold">Enviar solicitud / Send</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<a href="https://wa.me/5491165728549" target="_blank" class="fixed right-4 bottom-4 z-50">
+  <img src="assets/whatsapp.svg" alt="WhatsApp" class="h-14 w-14 shadow-lg rounded-full">
+</a>
+
+<footer class="bg-black text-white py-6 mt-6 text-center">
+  <p>© 2025 GoBa Agency · <a href="mailto:yansr20@yahoo.com" class="text-pink-400">yansr20@yahoo.com</a></p>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.lang').forEach(el=>el.classList.add('lang-hidden'));
+  document.querySelectorAll('.' + l).forEach(el=>el.classList.remove('lang-hidden'));
+  document.documentElement.lang = (l==='en') ? 'en' : 'es';
+}
+setLang('es');
+</script>
+</body>
+</html>
