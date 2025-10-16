@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+# Establece los permisos necesarios
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
